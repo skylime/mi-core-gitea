@@ -1,11 +1,11 @@
 {
-	"name":         "core-gogs",
-	"version":      "18.4.0",
-	"description":  "core.io Gogs - Go Git Service",
+	"name":         "core-gitea",
+	"version":      "19.3.0",
+	"description":  "core.io Git - Git Service via Gitea",
 	"organization": "SkyLime",
 	"brand":        "Instance",
-	"homepage":     "https://github.com/skylime/mi-core-gogs",
-	"base":         "f2e83a3d-c128-4f67-b398-9cb841b2783a",
+	"homepage":     "https://github.com/skylime/mi-core-gitea",
+	"base":         "06d72570-a857-4ae4-98ae-a175f1507f53",
 	"minram":       512,
 	"customer_metadata": {
 		"root_authorized_keys": {"type": "text", "description": "SSH public authorized key(s) for the root user"},
