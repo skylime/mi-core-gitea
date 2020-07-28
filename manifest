@@ -1,9 +1,9 @@
 name="core-gitea"
 organization="SkyLime"
 brand="Instance"
-version="19.3.0"
+version="20.2.0"
 description="core.io Git - Git Service via Gitea"
 homepage="https://github.com/skylime/mi-core-git"
 users="root admin"
 minram=512
-base="06d72570-a857-4ae4-98ae-a175f1507f53"
+base="6be3b1c7-a8f3-4f44-82c8-7a58df74706b"

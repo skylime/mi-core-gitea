@@ -5,13 +5,16 @@ HOSTNAME=$(hostname)
 GITEA_APP_INI=/opt/local/etc/gitea/conf/app.ini
 
 # Secrets
-LFS_JWT_SECRET=$(/opt/core/bin/mdata-create-password.sh -m gitea_lfs_jwt_secret)
 INTERNAL_TOKEN=$(/opt/core/bin/mdata-create-password.sh -m gitea_internal_token)
 SECRET_KEY=$(/opt/core/bin/mdata-create-password.sh -m gitea_secret_key)
-JWT_SECRET=$(/opt/core/bin/mdata-create-password.sh -m gitea_jwt_secret)
+
+LFS_JWT_SECRET=$(/opt/core/bin/mdata-create-password.sh -m gitea_lfs_jwt_secret -s $(gitea generate secret JWT_SECRET))
+JWT_SECRET=$(/opt/core/bin/mdata-create-password.sh -m gitea_jwt_secret -s $(gitea generate secret JWT_SECRET))
 
 GITEA_ADMIN_INITIAL_PW=$(/opt/core/bin/mdata-create-password.sh -m gitea_admin_initial_pw)
 GITEA_ADMIN_EMAIL=$(mdata-get gitea_admin_email || mdata-get mail_adminaddr)
+
+DISABLE_REGISTRATION=$(mdata-get gitea_disable_registration || echo "false")
 
 cat > ${GITEA_APP_INI} <<EOF
 #
