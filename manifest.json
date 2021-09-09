@@ -1,11 +1,11 @@
 {
 	"name":         "core-gitea",
-	"version":      "20.2.0",
+	"version":      "20.4.0",
 	"description":  "core.io Git - Git Service via Gitea",
 	"organization": "SkyLime",
 	"brand":        "Instance",
 	"homepage":     "https://github.com/skylime/mi-core-gitea",
-	"base":         "6be3b1c7-a8f3-4f44-82c8-7a58df74706b",
+	"base":         "b17e3cc1-5993-4af9-9e5e-70653fa856f6",
 	"minram":       512,
 	"customer_metadata": {
 		"root_authorized_keys": {"type": "text", "description": "SSH public authorized key(s) for the root user"},

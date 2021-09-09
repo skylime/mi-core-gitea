@@ -14,7 +14,7 @@ JWT_SECRET=$(/opt/core/bin/mdata-create-password.sh -m gitea_jwt_secret -s $(git
 GITEA_ADMIN_INITIAL_PW=$(/opt/core/bin/mdata-create-password.sh -m gitea_admin_initial_pw)
 GITEA_ADMIN_EMAIL=$(mdata-get gitea_admin_email || mdata-get mail_adminaddr)
 
-DISABLE_REGISTRATION=$(mdata-get gitea_disable_registration || echo "false")
+DISABLE_REGISTRATION=$(mdata-get gitea_disable_registration || echo "true")
 
 cat > ${GITEA_APP_INI} <<EOF
 #
